@@ -122,7 +122,7 @@ public class PlotSquaredPlotsRangeProducer implements IRangeProducer, Listener {
 	
 	// These events just don't fire when they're supposed to
 	
-/*	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=true)
+	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=true)
 	public void onPlotRemoved(PlotDeleteEvent event) {
 		runLater(() -> {
 			Plot plot = event.getPlot();
@@ -135,12 +135,12 @@ public class PlotSquaredPlotsRangeProducer implements IRangeProducer, Listener {
 					.filter(p -> players.contains(p.getUniqueId()))
 					.forEach(p -> rangeGroup.removeRangesByTags(p, tag));
 		});
-	}*/
+	}
 	
 	/**
 	 * Resend all merged plots to account for changed border areas.
 	 */
-/*	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=true)
+	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=true)
 	public void onPlotMerge(PlotMergeEvent event) {
 		runLater(() -> {
 			ArrayList<PlotId> plotIDs = event.getPlots();
@@ -167,12 +167,12 @@ public class PlotSquaredPlotsRangeProducer implements IRangeProducer, Listener {
 						rangeGroup.addRanges(p, ranges);
 					});
 		});
-	}*/
+	}
 	
 	/**
 	 * Resend all unmerged plots to account for changed border areas.
 	 */
-/*	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=true)
+	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=true)
 	public void onPlotUnmerge(PlotUnlinkEvent event) {
 		runLater(() -> {
 			ArrayList<PlotId> plotIDs = event.getPlots();
@@ -203,5 +203,5 @@ public class PlotSquaredPlotsRangeProducer implements IRangeProducer, Listener {
 						rangeGroup.addRanges(p, ranges);
 					});
 		});
-	}*/
+	}
 }
